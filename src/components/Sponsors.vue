@@ -2,80 +2,55 @@
 import { Marquee } from "@selemondev/vue3-marquee";
 import "@selemondev/vue3-marquee/dist/style.css";
 
-import {
-  Crown,
-  Vegan,
-  Ghost,
-  Puzzle,
-  Squirrel,
-  Cookie,
-  Drama,
-} from "lucide-vue-next";
-
-interface sponsorsProps {
-  icon: string;
+interface Sponsor {
+  logo: string;
   name: string;
 }
 
-const sponsors: sponsorsProps[] = [
+const sponsors: Sponsor[] = [
   {
-    icon: "crown",
+    logo: "/public/unhas.png", // Logo Universitas Hasanuddin
     name: "Universitas Hasanuddin",
   },
   {
-    icon: "vegan",
+    logo: "/public/umi.png", // Logo Universitas Muslim Indonesia
     name: "Universitas Muslim Indonesia",
   },
   {
-    icon: "ghost",
+    logo: "/public/unismuh.png", // Logo Universitas Muhammadiyah Makassar
     name: "Universitas Muhammadiyah Makassar",
   },
 ];
-
-const iconMap: Record<
-  string,
-  | typeof Crown
-  | typeof Vegan
-  | typeof Ghost
-  | typeof Puzzle
-  | typeof Squirrel
-  | typeof Cookie
-  | typeof Drama
-> = {
-  crown: Crown,
-  vegan: Vegan,
-  ghost: Ghost,
-  puzzle: Puzzle,
-  squirrel: Squirrel,
-  cookie: Cookie,
-  drama: Drama,
-};
 </script>
 
 <template>
   <section
     id="sponsors"
-    class="max-w-[75%] mx-auto pb-24 sm:pb-32"
+    class="mx-auto pb-24 sm:pb-32 max-w-[600px]"
   >
-    <h2 class="text-lg md:text-xl text-center mb-6">Dipercaya oleh Mahasiswa dari Berbagai Kampus Ternama</h2>
+    <h2 class="text-lg md:text-xl text-center mb-6">
+      Dipercaya oleh Mahasiswa dari Berbagai Kampus Ternama
+    </h2>
 
-    <div class="mx-auto">
+    <div class="mx-auto overflow-hidden">
       <Marquee
-        class="gap-[3rem]"
+        class="overflow-hidden"
+        innerClassName="flex gap-24 items-center whitespace-nowrap"
         :pauseOnHover="true"
         :fade="true"
-        innerClassName="gap-[3rem]"
+        speed="20"
       >
         <div
-          v-for="{ icon, name } in sponsors"
+          v-for="{ logo, name } in sponsors"
           :key="name"
+          class="flex-none w-[250px] flex items-center justify-start gap-4"
         >
-          <div class="flex items-center text-xl md:text-2xl font-medium">
-            <component
-              :is="iconMap[icon]"
-              class="mr-2"
-              stroke-width="3"
-            />
+          <img
+            :src="logo"
+            :alt="name"
+            class="max-w-[60px] md:max-w-[80px] flex-shrink-0"
+          />
+          <div class="text-base md:text-lg font-medium text-left whitespace-normal break-words leading-normal max-w-[150px]">
             {{ name }}
           </div>
         </div>

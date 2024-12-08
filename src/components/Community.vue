@@ -25,30 +25,23 @@ import DiscordIcon from "@/icons/DiscordIcon.vue";
         >
           <CardHeader>
             <CardTitle class="text-4xl md:text-5xl font-bold">
-              <Component
-                class="w-20 h-20 m-auto mb-4"
-                :is="DiscordIcon"
-              />
-              Ready to join this
-              <span
+              Siap Untuk Memulai Perjalanan Menuju Kelulusan<span
                 class="text-transparent bg-gradient-to-r from-[#0080FF] to-[#66B2FF] bg-clip-text"
               >
-                Community?
-              </span>
+                UKMPPD</span>?
             </CardTitle>
           </CardHeader>
           <CardContent class="lg:w-[80%] text-xl text-muted-foreground">
-            Join our vibrant Discord community! Connect, share, and grow with
-            like-minded enthusiasts. Click to dive in! 🚀
+            Dapatkan akses penuh ke latihan soal CBT UKMPPD, analisis personal, dan rekomendasi belajar khusus untuk memaksimalkan persiapan UKMPPD Anda. Klik untuk coba sekarang!
           </CardContent>
 
           <CardFooter>
             <Button as-child>
               <a
-                href="https://discord.com/"
+                href="#"
                 target="_blank"
               >
-                Join Discord
+                Coba Gratis Sekarang
               </a>
             </Button>
           </CardFooter>

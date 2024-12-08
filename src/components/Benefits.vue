@@ -1,14 +1,6 @@
 <script setup lang="ts">
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-import {
-  BookOpen,
-  BrainCircuit,
-  BookMarked,
-  Clock,
-  Stethoscope,
-  GraduationCap,
-} from "lucide-vue-next";
+import { XCircle } from "lucide-vue-next";
 
 interface BenefitsProps {
   icon: string;
@@ -43,21 +35,13 @@ const benefitList: BenefitsProps[] = [
   },
 ];
 
-const iconMap: Record<
-  string,
-  | typeof BookOpen
-  | typeof BrainCircuit
-  | typeof BookMarked
-  | typeof Clock
-  | typeof Stethoscope
-  | typeof GraduationCap
-> = {
-  bookOpen: BookOpen,
-  brainCircuit: BrainCircuit,
-  bookMarked: BookMarked,
-  clock: Clock,
-  stethoscope: Stethoscope,
-  graduationCap: GraduationCap,
+const iconMap: Record<string, typeof XCircle> = {
+  bookOpen: XCircle,
+  brainCircuit: XCircle,
+  bookMarked: XCircle,
+  clock: XCircle,
+  stethoscope: XCircle,
+  graduationCap: XCircle,
 };
 </script>
 
@@ -87,14 +71,15 @@ const iconMap: Record<
           <CardHeader>
             <div class="flex justify-between">
               <component
-                class="size-8 mb-6 text-primary"
+                class="size-8 mb-6 text-red-500"
                 :is="iconMap[icon]"
               />
 
               <span
                 class="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30"
-                >0{{ index + 1 }}</span
               >
+                0{{ index + 1 }}
+              </span>
             </div>
 
             <CardTitle>{{ title }}</CardTitle>
