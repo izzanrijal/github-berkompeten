@@ -2,12 +2,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import {
-  Sparkle,
-  Tag,
-  Paintbrush,
-  Blocks,
-  LineChart,
-  Wallet,
+  BookOpen,
+  BrainCircuit,
+  BookMarked,
+  Clock,
+  Stethoscope,
+  GraduationCap,
 } from "lucide-vue-next";
 
 interface BenefitsProps {
@@ -18,25 +18,25 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "blocks",
+    icon: "bookOpen",
     title: "Bingung Menentukan Topik",
     description:
       "Sulit menentukan topik penyakit atau diagnosis yang harus diprioritaskan untuk dipelajari.",
   },
   {
-    icon: "lineChart",
+    icon: "brainCircuit",
     title: "Kewalahan dengan Banyaknya Materi",
     description:
       "Jumlah materi yang perlu dipelajari terasa terlalu banyak dan membingungkan.",
   },
   {
-    icon: "wallet",
+    icon: "stethoscope",
     title: "Kekhawatiran Nilai Ujian CBT Tidak Cukup",
     description:
       "Takut gagal mencapai skor di atas ambang batas kelulusan UKMPPD.",
   },
   {
-    icon: "sparkle",
+    icon: "graduationCap",
     title: "Belajar Tidak Efisien",
     description:
       "Waktu belajar terasa tidak efektif karena tidak terarah dan kurang mendapat umpan balik.",
@@ -45,19 +45,19 @@ const benefitList: BenefitsProps[] = [
 
 const iconMap: Record<
   string,
-  | typeof Sparkle
-  | typeof Tag
-  | typeof Paintbrush
-  | typeof Blocks
-  | typeof LineChart
-  | typeof Wallet
+  | typeof BookOpen
+  | typeof BrainCircuit
+  | typeof BookMarked
+  | typeof Clock
+  | typeof Stethoscope
+  | typeof GraduationCap
 > = {
-  sparkle: Sparkle,
-  tag: Tag,
-  paintbrush: Paintbrush,
-  blocks: Blocks,
-  lineChart: LineChart,
-  wallet: Wallet,
+  bookOpen: BookOpen,
+  brainCircuit: BrainCircuit,
+  bookMarked: BookMarked,
+  clock: Clock,
+  stethoscope: Stethoscope,
+  graduationCap: GraduationCap,
 };
 </script>
 
@@ -68,13 +68,13 @@ const iconMap: Record<
   >
     <div class="grid lg:grid-cols-2 place-items-center lg:gap-24">
       <div>
-        <h2 class="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+        <h2 class="text-lg text-primary mb-2 tracking-wider">Tantangan UKMPPD</h2>
 
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
-        Siapkah Anda Mengatasi Tantangan Besar dalam Mempersiapkan UKMPPD?
+          Siapkah Anda Mengatasi Tantangan Besar dalam Mempersiapkan UKMPPD?
         </h2>
         <p class="text-xl text-muted-foreground mb-8">
-        Kami memahami berbagai kesulitan yang Anda hadapi dalam persiapan CBT UKMPPD. Berikut adalah beberapa tantangan utama yang sering dialami oleh para peserta.
+          Kami memahami berbagai kesulitan yang Anda hadapi dalam persiapan CBT UKMPPD. Berikut adalah beberapa tantangan utama yang sering dialami oleh para peserta.
         </p>
       </div>
 

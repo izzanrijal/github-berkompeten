@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { onMounted, ref } from 'vue';
 
 import {
   Card,
@@ -30,54 +31,65 @@ interface ReviewProps {
 const reviewList: ReviewProps[] = [
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe",
-    userName: "Product Manager",
+    name: "Dr. Sarah Wijaya",
+    userName: "Dokter Muda",
     comment:
-      "Wow Vue + Shadcn-Vue is awesome!. This template lets me change colors, fonts and images to match my brand identity. ",
+      "Platform ini sangat membantu dalam persiapan UKMPPD saya. Rekomendasi topik belajarnya sangat tepat sasaran!",
     rating: 5.0,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Sophia Collins",
-    userName: "Cybersecurity Analyst",
+    name: "Dr. Ahmad Fauzi",
+    userName: "Dokter Muda",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. ",
+      "Saya suka cara platform ini menganalisis performa dan memberikan saran yang personal untuk perbaikan.",
     rating: 4.8,
   },
-
   {
     image: "https://github.com/shadcn.png",
-    name: "Adam Johnson",
-    userName: "Chief Technology Officer",
+    name: "Dr. Maya Putri",
+    userName: "Dokter Muda",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Bank soal yang lengkap dan terstruktur membuat persiapan UKMPPD jadi lebih terarah.",
     rating: 4.9,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Ethan Parker",
-    userName: "Data Scientist",
+    name: "Dr. Reza Pratama",
+    userName: "Dokter Muda",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Fitur analisis personal sangat membantu saya fokus pada topik yang masih lemah.",
     rating: 5.0,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Ava Mitchell",
-    userName: "IT Project Manager",
+    name: "Dr. Linda Susanti",
+    userName: "Dokter Muda",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.",
+      "Berkat Berkompeten.id, saya bisa lebih percaya diri menghadapi UKMPPD.",
     rating: 5.0,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Isabella Reed",
-    userName: "DevOps Engineer",
+    name: "Dr. Budi Santoso",
+    userName: "Dokter Muda",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Rekomendasi belajar yang diberikan sangat membantu mengoptimalkan waktu persiapan UKMPPD saya.",
     rating: 4.9,
   },
 ];
+
+const api = ref(null);
+
+onMounted(() => {
+  const autoPlayInterval = setInterval(() => {
+    if (api.value) {
+      api.value.scrollNext();
+    }
+  }, 3000);
+
+  return () => clearInterval(autoPlayInterval);
+});
 </script>
 
 <template>
@@ -91,15 +103,17 @@ const reviewList: ReviewProps[] = [
       </h2>
 
       <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-        Hear What Our 1000+ Clients Say
+        Apa Kata Mereka?
       </h2>
     </div>
 
     <Carousel
       :opts="{
         align: 'start',
+        loop: true,
       }"
       class="relative w-[80%] sm:w-[90%] lg:max-w-screen-xl mx-auto"
+      @init-api="api = $event"
     >
       <CarouselContent>
         <CarouselItem
@@ -124,10 +138,10 @@ const reviewList: ReviewProps[] = [
               <div class="flex flex-row items-center gap-4">
                 <Avatar>
                   <AvatarImage
-                    src="https://www.radix-vue.com/logo.svg"
-                    alt="@radix-vue"
+                    :src="review.image"
+                    :alt="review.name"
                   />
-                  <AvatarFallback>SV</AvatarFallback>
+                  <AvatarFallback>{{ review.name.charAt(0) }}</AvatarFallback>
                 </Avatar>
 
                 <div class="flex flex-col">

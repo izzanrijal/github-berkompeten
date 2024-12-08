@@ -19,7 +19,8 @@ enum PopularPlan {
 interface PlanProps {
   title: string;
   popular: PopularPlan;
-  price: number;
+  originalPrice: number;
+  discountedPrice: number;
   description: string;
   buttonText: string;
   benefitList: string[];
@@ -27,51 +28,63 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Free",
+    title: "Basic",
     popular: 0,
-    price: 0,
+    originalPrice: 500000,
+    discountedPrice: 250000,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+      "Akses dasar ke platform untuk persiapan UKMPPD Anda",
+    buttonText: "Mulai Trial Gratis",
     benefitList: [
-      "1 team member",
-      "1 GB storage",
-      "Upto 2 pages",
-      "Community support",
-      "AI assistance",
+      "500+ Soal Latihan",
+      "Analisis Dasar",
+      "Forum Komunitas",
+      "Panduan Belajar Dasar",
+      "Email Support",
     ],
   },
   {
     title: "Premium",
     popular: 1,
-    price: 45,
+    originalPrice: 1000000,
+    discountedPrice: 500000,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get starterd",
+      "Akses lengkap ke semua fitur untuk hasil maksimal",
+    buttonText: "Pilih Premium",
     benefitList: [
-      "4 team member",
-      "8 GB storage",
-      "Upto 6 pages",
-      "Priority support",
-      "AI assistance",
+      "2000+ Soal Latihan",
+      "Analisis Mendalam",
+      "Konsultasi Personal",
+      "Panduan Belajar Premium",
+      "24/7 Priority Support",
     ],
   },
   {
-    title: "Enterprise",
+    title: "Ultimate",
     popular: 0,
-    price: 120,
+    originalPrice: 2000000,
+    discountedPrice: 1000000,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "Solusi lengkap dengan bimbingan personal",
+    buttonText: "Hubungi Kami",
     benefitList: [
-      "10 team member",
-      "20 GB storage",
-      "Upto 10 pages",
-      "Phone & email support",
-      "AI assistance",
+      "5000+ Soal Latihan",
+      "Analisis Expert",
+      "Mentoring One-on-One",
+      "Panduan Belajar Custom",
+      "Dedicated Support Team",
     ],
   },
 ];
+
+const formatPrice = (price: number) => {
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(price);
+}
 </script>
 
 <template>
@@ -81,13 +94,11 @@ const plans: PlanProps[] = [
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Get unlimitted access
+      Pilih Paket Sesuai Kebutuhan Anda
     </h2>
 
-    <h3
-      class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14"
-    >
-      Lorem ipsum dolor sit amet consectetur adipisicing reiciendis.
+    <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14">
+      Diskon 50% untuk semua paket! Jangan lewatkan kesempatan ini.
     </h3>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
@@ -95,7 +106,8 @@ const plans: PlanProps[] = [
         v-for="{
           title,
           popular,
-          price,
+          originalPrice,
+          discountedPrice,
           description,
           buttonText,
           benefitList,
@@ -113,9 +125,13 @@ const plans: PlanProps[] = [
 
           <CardDescription class="pb-4">{{ description }}</CardDescription>
 
-          <div>
-            <span class="text-3xl font-bold">${{ price }}</span>
-            <span class="text-muted-foreground"> /month</span>
+          <div class="flex flex-col">
+            <span class="text-lg line-through text-muted-foreground">{{ formatPrice(originalPrice) }}</span>
+            <div class="flex items-center gap-2">
+              <span class="text-3xl font-bold">{{ formatPrice(discountedPrice) }}</span>
+              <span class="text-sm text-primary font-semibold">50% OFF</span>
+            </div>
+            <span class="text-muted-foreground text-sm">/bulan</span>
           </div>
         </CardHeader>
 

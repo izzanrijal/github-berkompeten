@@ -2,14 +2,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import {
-  Paintbrush,
-  MessageCircle,
-  TabletSmartphone,
-  BadgeCheck,
-  Goal,
-  PictureInPicture,
-  MousePointerClick,
-  Newspaper,
+  Brain,
+  ListTodo,
+  GraduationCap,
+  LineChart,
+  Clock,
+  Trophy
 } from "lucide-vue-next";
 
 interface FeaturesProps {
@@ -20,37 +18,37 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "tabletSmartphone",
+    icon: "brain",
     title: "Rekomendasi Belajar Personal",
     description:
       "Dapatkan saran topik pembelajaran yang dirancang khusus berdasarkan kebutuhan dan kemampuan Anda.",
   },
   {
-    icon: "goal",
+    icon: "listTodo",
     title: "Prioritas Topik Belajar",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Panduan terstruktur untuk menentukan urutan pembelajaran yang paling efektif sesuai kebutuhan Anda.",
   },
   {
-    icon: "badgeCheck",
+    icon: "graduationCap",
     title: "Latihan Soal UKMPPD Lengkap",
     description:
       "Akses ribuan soal latihan yang mencakup seluruh topik SKDI untuk memperkuat pemahaman Anda.",
   },
   {
-    icon: "pictureInPicture",
+    icon: "lineChart",
     title: "Umpan Balik yang Akurat",
     description:
       "Tinjau kemajuan Anda dengan analitik yang menunjukkan area kekuatan dan kelemahan Anda.",
   },
   {
-    icon: "mousePointerClick",
+    icon: "clock",
     title: "Efisiensi Belajar secara Maksimal",
     description:
       "Rancang jadwal belajar yang efisien untuk memanfaatkan waktu Anda secara produktif.",
   },
   {
-    icon: "newspaper",
+    icon: "trophy",
     title: "Percaya Diri Menghadapi Ujian",
     description:
       "Dengan latihan terarah dan dukungan penuh, tingkatkan rasa percaya diri Anda menghadapi CBT UKMPPD.",
@@ -59,23 +57,14 @@ const featureList: FeaturesProps[] = [
 
 const iconMap: Record<
   string,
-  | typeof TabletSmartphone
-  | typeof BadgeCheck
-  | typeof Goal
-  | typeof PictureInPicture
-  | typeof Paintbrush
-  | typeof MousePointerClick
-  | typeof MessageCircle
-  | typeof Newspaper
+  typeof Brain | typeof ListTodo | typeof GraduationCap | typeof LineChart | typeof Clock | typeof Trophy
 > = {
-  tabletSmartphone: TabletSmartphone,
-  badgeCheck: BadgeCheck,
-  goal: Goal,
-  pictureInPicture: PictureInPicture,
-  paintbrush: Paintbrush,
-  mousePointerClick: MousePointerClick,
-  messageCircle: MessageCircle,
-  newspaper: Newspaper,
+  brain: Brain,
+  listTodo: ListTodo,
+  graduationCap: GraduationCap,
+  lineChart: LineChart,
+  clock: Clock,
+  trophy: Trophy,
 };
 </script>
 
@@ -125,5 +114,3 @@ const iconMap: Record<
     </div>
   </section>
 </template>
-
-<style lang="less" scoped></style>
