@@ -74,7 +74,7 @@ const iconMap: Record<
     class="container py-24 sm:py-32"
   >
     <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-      Features
+      Fitur
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
