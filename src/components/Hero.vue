@@ -37,7 +37,7 @@ import { ArrowRight } from "lucide-vue-next";
         </div>
 
         <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-        Selesaikan Latihan Soal yang Tersedia dan Dapatkan Insight Personal—Panduan Prioritas Belajar Anda.
+        Selesaikan Latihan Soal yang Kami Sediakan dan Dapatkan Insight Personal—Panduan Prioritas Belajar Anda.
         </p>
 
         <div class="space-y-4 md:space-y-0 md:space-x-4">

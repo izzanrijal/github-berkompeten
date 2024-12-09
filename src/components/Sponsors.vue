@@ -29,7 +29,7 @@ const sponsors: Sponsor[] = [
     class="mx-auto pb-24 sm:pb-32 max-w-[600px]"
   >
     <h2 class="text-lg md:text-xl text-center mb-6">
-      Dipercaya oleh Mahasiswa dari Berbagai Kampus Ternama
+      Dipercaya oleh Mahasiswa Kedokteran dari Berbagai Kampus Ternama
     </h2>
 
     <div class="mx-auto overflow-hidden">
