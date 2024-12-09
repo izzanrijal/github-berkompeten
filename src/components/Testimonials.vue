@@ -31,50 +31,26 @@ interface ReviewProps {
 const reviewList: ReviewProps[] = [
   {
     image: "https://github.com/shadcn.png",
-    name: "Dr. Sarah Wijaya",
+    name: "dr. Melia Budi",
     userName: "Dokter Muda",
     comment:
-      "Platform ini sangat membantu dalam persiapan UKMPPD saya. Rekomendasi topik belajarnya sangat tepat sasaran!",
+      "Special thanks buat team Berkompeten.id, Sistemnya keren dan inovatif! Salut! Dengan begitu banyak jenis Bank Soal yang disediakan dan bisa diakses kapanpun dan dimanapun menjadikan persiapan ujian lebih mantap. Sangat membantu analisa kemampuan belajar dengan sangat akurat.",
     rating: 5.0,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Dr. Ahmad Fauzi",
+    name: "dr. Rais Dahyar",
     userName: "Dokter Muda",
     comment:
-      "Saya suka cara platform ini menganalisis performa dan memberikan saran yang personal untuk perbaikan.",
+      "Berkompeten.id mengajarkan bahkan menuntut kita BERDIKARI, dan yang terpenting, kita bisa setidaknya memprediksi letak salah serta benar dengan tingkat akurasi yang cukup tinggi tanpa mendahului takdir Tuhan.",
     rating: 4.8,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Dr. Maya Putri",
+    name: "dr. Dewi Damayanti",
     userName: "Dokter Muda",
     comment:
-      "Bank soal yang lengkap dan terstruktur membuat persiapan UKMPPD jadi lebih terarah.",
-    rating: 4.9,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Dr. Reza Pratama",
-    userName: "Dokter Muda",
-    comment:
-      "Fitur analisis personal sangat membantu saya fokus pada topik yang masih lemah.",
-    rating: 5.0,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Dr. Linda Susanti",
-    userName: "Dokter Muda",
-    comment:
-      "Berkat Berkompeten.id, saya bisa lebih percaya diri menghadapi UKMPPD.",
-    rating: 5.0,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Dr. Budi Santoso",
-    userName: "Dokter Muda",
-    comment:
-      "Rekomendasi belajar yang diberikan sangat membantu mengoptimalkan waktu persiapan UKMPPD saya.",
+      "Semenjak ikut Berkompeten.id, cara belajarku mulai berubah dengan seringnya latihan soal yang diberikan. Terutama Hasil Analisa dan Advisnya sangat membantu menutupi kekuranganku. Semoga kedepannya Berkompeten.id lebih baik lagi.",
     rating: 4.9,
   },
 ];

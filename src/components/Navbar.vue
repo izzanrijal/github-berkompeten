@@ -93,7 +93,7 @@ const isOpen = ref<boolean>(false);
       <ChevronsDown
         class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
       />
-      ShadcnVue</a
+      Berkompeten.id</a
     >
     <!-- Mobile -->
     <div class="flex items-center lg:hidden">
@@ -119,7 +119,7 @@ const isOpen = ref<boolean>(false);
                   <ChevronsDown
                     class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white"
                   />
-                  ShadcnVue
+                  Berkompeten.id
                 </a>
               </SheetTitle>
             </SheetHeader>
