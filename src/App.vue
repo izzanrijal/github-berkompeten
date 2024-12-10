@@ -18,8 +18,8 @@ import Footer from "./components/Footer.vue";
   <Sponsors />
   <Benefits />
   <Features />
-  <HowItWorks />
   <Testimonials />
+  <HowItWorks />
   <Pricing />
   <FAQ />
   <Community />

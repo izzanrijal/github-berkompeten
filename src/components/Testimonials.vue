@@ -32,7 +32,7 @@ const reviewList: ReviewProps[] = [
   {
     image: "https://github.com/shadcn.png",
     name: "dr. Melia Budi",
-    userName: "Dokter Muda",
+    userName: "FK Universitas Hasanuddin",
     comment:
       "Special thanks buat team Berkompeten.id, Sistemnya keren dan inovatif! Salut! Dengan begitu banyak jenis Bank Soal yang disediakan dan bisa diakses kapanpun dan dimanapun menjadikan persiapan ujian lebih mantap. Sangat membantu analisa kemampuan belajar dengan sangat akurat.",
     rating: 5.0,
@@ -40,7 +40,7 @@ const reviewList: ReviewProps[] = [
   {
     image: "https://github.com/shadcn.png",
     name: "dr. Rais Dahyar",
-    userName: "Dokter Muda",
+    userName: "FK Universitas Hasanuddin",
     comment:
       "Berkompeten.id mengajarkan bahkan menuntut kita BERDIKARI, dan yang terpenting, kita bisa setidaknya memprediksi letak salah serta benar dengan tingkat akurasi yang cukup tinggi tanpa mendahului takdir Tuhan.",
     rating: 4.8,
@@ -48,7 +48,7 @@ const reviewList: ReviewProps[] = [
   {
     image: "https://github.com/shadcn.png",
     name: "dr. Dewi Damayanti",
-    userName: "Dokter Muda",
+    userName: "FK Universitas Muslim Indonesia",
     comment:
       "Semenjak ikut Berkompeten.id, cara belajarku mulai berubah dengan seringnya latihan soal yang diberikan. Terutama Hasil Analisa dan Advisnya sangat membantu menutupi kekuranganku. Semoga kedepannya Berkompeten.id lebih baik lagi.",
     rating: 4.9,
