@@ -30,7 +30,7 @@ interface ReviewProps {
 
 const reviewList: ReviewProps[] = [
   {
-    image: "https://github.com/shadcn.png",
+    image: "./public/melia.png",
     name: "dr. Melia Budi",
     userName: "FK Universitas Hasanuddin",
     comment:
@@ -38,7 +38,7 @@ const reviewList: ReviewProps[] = [
     rating: 5.0,
   },
   {
-    image: "https://github.com/shadcn.png",
+    image: "./public/rais.png",
     name: "dr. Rais Dahyar",
     userName: "FK Universitas Hasanuddin",
     comment:
@@ -46,7 +46,7 @@ const reviewList: ReviewProps[] = [
     rating: 4.8,
   },
   {
-    image: "https://github.com/shadcn.png",
+    image: "./public/dewi.png",
     name: "dr. Dewi Damayanti",
     userName: "FK Universitas Muslim Indonesia",
     comment:

@@ -20,7 +20,7 @@ const FAQList: FAQProps[] = [
   },
   {
     "question": "Apakah ada simulasi CBT yang tersedia?",
-    "answer": "Ya, kami menyediakan simulasi dengan jumlah soal yang sama seperti ujian CBT asli, yaitu 200 soal. Namun, simulasi ini tidak kami batasi dengan waktu pengerjaan agar Anda bisa mengerjakan sesuai kesempatan tanpa tekanan waktu. Dengan demikian, analisis profil kemampuan Anda akan menjadi lebih akurat.",
+    "answer": "Ya, kami menyediakan simulasi dengan jumlah soal yang sama seperti ujian CBT asli, yaitu 200 soal untuk setiap paket soal. Namun, simulasi ini tidak kami batasi dengan waktu pengerjaan agar Anda bisa mengerjakan sesuai kesempatan tanpa tekanan waktu. Dengan demikian, analisis profil kemampuan Anda akan menjadi lebih akurat.",
     "value": "item-2"
   },
   {

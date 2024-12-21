@@ -1,3 +1,105 @@
+<template>
+  <header
+    class="w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-4 bg-card shadow-md"
+  >
+    <!-- Logo + Text -->
+    <a href="/" class="flex items-center space-x-3">
+      <img
+        src="@/assets/logo.svg"
+        alt="Berkompeten Logo"
+        class="h-9 w-auto"
+      />
+      <span class="text-lg font-bold text-foreground">Berkompeten.id</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <NavigationMenu class="hidden lg:flex">
+      <NavigationMenuList class="flex space-x-4">
+        <NavigationMenuItem>
+          <NavigationMenuTrigger class="bg-transparent text-base">
+            Features
+          </NavigationMenuTrigger>
+        </NavigationMenuItem>
+        <NavigationMenuItem v-for="{ href, label } in routeList" :key="label">
+          <NavigationMenuLink as-child>
+            <a
+              :href="href"
+              class="text-base font-medium text-foreground hover:text-primary"
+            >
+              {{ label }}
+            </a>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+
+    <!-- Call-to-Action Button -->
+    <Button class="hidden lg:block bg-primary text-white hover:bg-primary/90">
+      <a href="#" class="flex items-center gap-2">
+        <span>Coba Sekarang</span>
+      </a>
+    </Button>
+
+    <!-- Mobile Navigation -->
+    <div class="lg:hidden">
+      <Sheet v-model:open="isOpen">
+        <SheetTrigger as-child>
+          <Menu class="cursor-pointer" />
+        </SheetTrigger>
+
+        <SheetContent
+          side="left"
+          class="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card"
+        >
+          <div>
+            <!-- Mobile Header -->
+            <SheetHeader class="mb-4 ml-4">
+              <SheetTitle class="flex items-center space-x-3">
+                <img
+                  src="@/assets/logo.svg"
+                  alt="Berkompeten Logo"
+                  class="h-8 w-auto"
+                />
+                <span class="text-base font-bold text-foreground">
+                  Berkompeten.id
+                </span>
+              </SheetTitle>
+            </SheetHeader>
+
+            <!-- Mobile Navigation Links -->
+            <div class="flex flex-col gap-2">
+              <Button
+                v-for="{ href, label } in routeList"
+                :key="label"
+                as-child
+                variant="ghost"
+                class="justify-start text-base"
+              >
+                <a
+                  @click="isOpen = false"
+                  :href="href"
+                  class="text-base text-foreground"
+                >
+                  {{ label }}
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          <SheetFooter class="flex-col sm:flex-col justify-start items-start">
+            <Separator class="mb-2" />
+            <Button class="w-full bg-primary text-white">
+              <a href="#" class="flex items-center gap-2">
+                <span>Coba Sekarang</span>
+              </a>
+            </Button>
+          </SheetFooter>
+        </SheetContent>
+      </Sheet>
+    </div>
+  </header>
+</template>
+
 <script lang="ts" setup>
 import { ref } from "vue";
 
@@ -21,203 +123,31 @@ import {
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { ChevronsDown, Menu } from "lucide-vue-next";
+import { Menu } from "lucide-vue-next";
+
+// Import logo
+import logoSvg from "@/assets/logo.svg";
 
 interface RouteProps {
   href: string;
   label: string;
 }
 
-interface FeatureProps {
-  title: string;
-  description: string;
-}
-
 const routeList: RouteProps[] = [
-  {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
-  {
-    href: "#team",
-    label: "Team",
-  },
-  {
-    href: "#contact",
-    label: "Contact",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
+  { href: "#testimonials", label: "Testimonials" },
+  { href: "#team", label: "Team" },
+  { href: "#contact", label: "Contact" },
+  { href: "#faq", label: "FAQ" },
 ];
 
-const featureList: FeatureProps[] = [
-  {
-    title: "Showcase Your Value ",
-    description: "Highlight how your product solves user problems.",
-  },
-  {
-    title: "Build Trust",
-    description:
-      "Leverages social proof elements to establish trust and credibility.",
-  },
-  {
-    title: "Capture Leads",
-    description:
-      "Make your lead capture form visually appealing and strategically.",
-  },
-];
-
-const isOpen = ref<boolean>(false);
+const isOpen = ref(false);
 </script>
 
-<template>
-  <header
-    class="w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md"
-  >
-    <a
-      href="/"
-      class="font-bold text-lg flex items-center"
-    >
-      <ChevronsDown
-        class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
-      />
-      Berkompeten.id</a
-    >
-    <!-- Mobile -->
-    <div class="flex items-center lg:hidden">
-      <Sheet v-model:open="isOpen">
-        <SheetTrigger as-child>
-          <Menu
-            @click="isOpen = true"
-            class="cursor-pointer"
-          />
-        </SheetTrigger>
-
-        <SheetContent
-          side="left"
-          class="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card"
-        >
-          <div>
-            <SheetHeader class="mb-4 ml-4">
-              <SheetTitle class="flex items-center">
-                <a
-                  href="/"
-                  class="flex items-center"
-                >
-                  <ChevronsDown
-                    class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white"
-                  />
-                  Berkompeten.id
-                </a>
-              </SheetTitle>
-            </SheetHeader>
-
-            <div class="flex flex-col gap-2">
-              <Button
-                v-for="{ href, label } in routeList"
-                :key="label"
-                as-child
-                variant="ghost"
-                class="justify-start text-base"
-              >
-                <a
-                  @click="isOpen = false"
-                  :href="href"
-                >
-                  {{ label }}
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          <SheetFooter class="flex-col sm:flex-col justify-start items-start">
-            <Separator class="mb-2" />
-            <Button class="w-full">
-              <a
-                href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
-                target="_blank"
-                class="flex items-center gap-2"
-              >
-                <span>Coba Sekarang</span>
-              </a>
-            </Button>
-          </SheetFooter>
-        </SheetContent>
-      </Sheet>
-    </div>
-
-    <!-- Desktop -->
-    <NavigationMenu class="hidden lg:block">
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger class="bg-card text-base">
-            Features
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
-              <img
-                src="https://www.radix-vue.com/logo.svg"
-                alt="Beach"
-                class="h-full w-full rounded-md object-cover"
-              />
-              <ul class="flex flex-col gap-2">
-                <li
-                  v-for="{ title, description } in featureList"
-                  :key="title"
-                  class="rounded-md p-3 text-sm hover:bg-muted"
-                >
-                  <p class="mb-1 font-semibold leading-none text-foreground">
-                    {{ title }}
-                  </p>
-                  <p class="line-clamp-2 text-muted-foreground">
-                    {{ description }}
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink as-child>
-            <Button
-              v-for="{ href, label } in routeList"
-              :key="label"
-              as-child
-              variant="ghost"
-              class="justify-start text-base"
-            >
-              <a :href="href">
-                {{ label }}
-              </a>
-            </Button>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
-
-    <div class="hidden lg:flex">
-      <Button>
-        <a
-          href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
-          target="_blank"
-          class="flex items-center gap-2"
-        >
-          <span>Coba Sekarang</span>
-        </a>
-      </Button>
-    </div>
-  </header>
-</template>
-
 <style scoped>
-.shadow-light {
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.085);
+img {
+  max-height: 2.5rem;
 }
-
-.shadow-dark {
-  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.141);
+a {
+  text-decoration: none;
 }
 </style>
