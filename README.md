@@ -1,57 +1,49 @@
-# Shadcn/Vue Landing Page Template
+# Berkompeten.id
 
-## <a href="https://www.shadcn-vue.com/" target="_blank">Shadcn-Vue</a> + <a href="https://vuejs.org/" target="_blank">Vue.js</a> + <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> + <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>.
+Platform persiapan UKMPPD dengan latihan soal komprehensif dan analisis personal untuk membantu mahasiswa kedokteran lulus dengan lebih percaya diri.
 
-![Alt text](./public/demo-img.jpg)
-Live demo is now available: <a href="https://shadcn-vue-landing-page.vercel.app" target="_blank">Live Demo</a>
+## Fitur
 
-## Sections
+- [x] Latihan Soal UKMPPD Lengkap
+- [x] Analisis Personal
+- [x] Rekomendasi Belajar
+- [x] Prioritas Topik
+- [x] Efisiensi Belajar
+- [x] Simulasi CBT
 
-- [x] Navbar
-- [x] Sidebar(mobile)
-- [x] Hero
-- [x] Sponsors
-- [x] Benefits
-- [x] Features
-- [x] Services
-- [x] HowItWorks
-- [x] Testimonials
-- [x] Pricing
-- [x] Frequently Asked Questions(FAQ)
-- [x] Team
-- [x] Community
-- [x] Contact
-- [x] Footer
+## Teknologi
 
-## Features
+- Vue.js
+- TypeScript
+- Tailwind CSS
+- Radix UI Vue
 
-- [x] Fully Responsive Design
-- [x] User Friendly Navigation
-- [x] Dark Mode
-- [x] Meta tags
+## Pengembangan Lokal
 
-## How to install
-
-1. Clone this repositoy:
+1. Clone repositori ini
 
 ```bash
-git clone https://github.com/leoMirandaa/shadcn-vue-landing-page.git
+git clone https://github.com/berkompeten/web.git
 ```
 
-2. Go into project
+2. Masuk ke direktori proyek
 
 ```bash
-cd shadcn-vue-landing-page
+cd web
 ```
 
-3. Install dependencies
+3. Install dependensi
 
 ```bash
 npm install
 ```
 
-4. Run project
+4. Jalankan server pengembangan
 
 ```bash
 npm run dev
 ```
+
+## Lisensi
+
+Copyright © 2024 Berkompeten.id. All rights reserved.
