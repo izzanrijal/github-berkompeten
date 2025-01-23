@@ -39,7 +39,7 @@ import logoSvg from "@/assets/logo.svg";
               <a href="#faq" class="text-sm opacity-70 hover:text-primary">What is Berkompeten.id?</a>
             </li>
             <li>
-              <a href="#howitworks" class="text-sm opacity-70 hover:text-primary">How do I get started?</a>
+              <a href="#howitworks" class="text-sm opacity-70 hover:text-primary">How it works</a>
             </li>
             <li>
               <a href="#pricing" class="text-sm opacity-70 hover:text-primary">Pricing</a>
