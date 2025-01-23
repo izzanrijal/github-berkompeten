@@ -26,10 +26,9 @@ import logoSvg from "@/assets/logo.svg";
         <!-- Contact Section -->
         <div>
           <h3 class="font-bold text-lg mb-2">Contact</h3>
-          <p class="text-sm opacity-70">123 Competent Street</p>
-          <p class="text-sm opacity-70">Jakarta, Indonesia</p>
+          <p class="text-sm opacity-70 mb-2">Jln. Perintis Kemerdekaan, Perumahan Dosen Unhas Tamalanrea Blok R no. 27, Makassar, Indonesia</p>
           <p class="text-sm opacity-70">Email: <a href="mailto:support@berkompeten.id" class="text-primary">support@berkompeten.id</a></p>
-          <p class="text-sm opacity-70">Phone: +62-123-456-7890</p>
+          <p class="text-sm opacity-70">Phone: <a href="https://wa.me/6285280351100" class="text-primary hover:underline">+62-852-8035-1100</a></p>
         </div>
 
         <!-- FAQ Section -->
@@ -90,7 +89,7 @@ import logoSvg from "@/assets/logo.svg";
       <!-- Footer Credit -->
       <section class="text-center">
         <p class="text-sm opacity-70">
-          &copy; 2024 Made with ❤︎ by
+          &copy; 2024 Made with â¤ï¸Ž by
           <a
             target="_blank"
             href="https://github.com/leoMirandaa"
