@@ -36,13 +36,13 @@ import logoSvg from "@/assets/logo.svg";
           <h3 class="font-bold text-lg mb-2">FAQ</h3>
           <ul class="space-y-2">
             <li>
-              <a href="#faq" class="text-sm opacity-70 hover:text-primary">What is Berkompeten?</a>
+              <a href="#faq" class="text-sm opacity-70 hover:text-primary">What is Berkompeten.id?</a>
             </li>
             <li>
-              <a href="#faq" class="text-sm opacity-70 hover:text-primary">How do I get started?</a>
+              <a href="#howitworks" class="text-sm opacity-70 hover:text-primary">How do I get started?</a>
             </li>
             <li>
-              <a href="#faq" class="text-sm opacity-70 hover:text-primary">Pricing and Plans</a>
+              <a href="#pricing" class="text-sm opacity-70 hover:text-primary">Pricing</a>
             </li>
           </ul>
         </div>
@@ -89,7 +89,7 @@ import logoSvg from "@/assets/logo.svg";
       <!-- Footer Credit -->
       <section class="text-center">
         <p class="text-sm opacity-70">
-          &copy; 2024 Made with â¤ï¸Ž by
+          &copy; 2024 Made with ❤ by
           <a
             target="_blank"
             href="https://github.com/leoMirandaa"
