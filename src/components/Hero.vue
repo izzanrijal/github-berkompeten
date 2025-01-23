@@ -42,7 +42,7 @@ import { ArrowRight } from "lucide-vue-next";
 
         <div class="space-y-4 md:space-y-0 md:space-x-4">
           <Button class="w-5/6 md:w-1/4 font-bold group/arrow">
-            Coba Gratis Sekarang
+            <a href="https://app.berkompeten.id/login">Coba Gratis Sekarang</a>
           </Button>
 
           <Button
@@ -51,8 +51,7 @@ import { ArrowRight } from "lucide-vue-next";
             class="w-5/6 md:w-1/4 font-bold"
           >
             <a
-              href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
-              target="_blank"
+              href="https://app.berkompeten.id/login"
               >Lihat Contoh Analisis</a
             >
           </Button>

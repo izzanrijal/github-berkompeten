@@ -16,17 +16,42 @@
     <NavigationMenu class="hidden lg:flex">
       <NavigationMenuList class="flex space-x-4">
         <NavigationMenuItem>
-          <NavigationMenuTrigger class="bg-transparent text-base">
-            Features
-          </NavigationMenuTrigger>
-        </NavigationMenuItem>
-        <NavigationMenuItem v-for="{ href, label } in routeList" :key="label">
           <NavigationMenuLink as-child>
             <a
-              :href="href"
+              href="#features"
               class="text-base font-medium text-foreground hover:text-primary"
             >
-              {{ label }}
+              Fitur
+            </a>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink as-child>
+            <a
+              href="#testimonials"
+              class="text-base font-medium text-foreground hover:text-primary"
+            >
+              Testimonial
+            </a>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink as-child>
+            <a
+              href="#pricing"
+              class="text-base font-medium text-foreground hover:text-primary"
+            >
+              Harga
+            </a>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink as-child>
+            <a
+              href="#faq"
+              class="text-base font-medium text-foreground hover:text-primary"
+            >
+              FAQ
             </a>
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -35,7 +60,7 @@
 
     <!-- Call-to-Action Button -->
     <Button class="hidden lg:block bg-primary text-white hover:bg-primary/90">
-      <a href="#" class="flex items-center gap-2">
+      <a href="https://app.berkompeten.id/login" class="flex items-center gap-2">
         <span>Coba Sekarang</span>
       </a>
     </Button>
@@ -69,18 +94,55 @@
             <!-- Mobile Navigation Links -->
             <div class="flex flex-col gap-2">
               <Button
-                v-for="{ href, label } in routeList"
-                :key="label"
                 as-child
                 variant="ghost"
                 class="justify-start text-base"
               >
                 <a
                   @click="isOpen = false"
-                  :href="href"
+                  href="#features"
                   class="text-base text-foreground"
                 >
-                  {{ label }}
+                  Fitur
+                </a>
+              </Button>
+              <Button
+                as-child
+                variant="ghost"
+                class="justify-start text-base"
+              >
+                <a
+                  @click="isOpen = false"
+                  href="#testimonials"
+                  class="text-base text-foreground"
+                >
+                  Testimonial
+                </a>
+              </Button>
+              <Button
+                as-child
+                variant="ghost"
+                class="justify-start text-base"
+              >
+                <a
+                  @click="isOpen = false"
+                  href="#pricing"
+                  class="text-base text-foreground"
+                >
+                  Harga
+                </a>
+              </Button>
+              <Button
+                as-child
+                variant="ghost"
+                class="justify-start text-base"
+              >
+                <a
+                  @click="isOpen = false"
+                  href="#faq"
+                  class="text-base text-foreground"
+                >
+                  FAQ
                 </a>
               </Button>
             </div>
@@ -89,7 +151,7 @@
           <SheetFooter class="flex-col sm:flex-col justify-start items-start">
             <Separator class="mb-2" />
             <Button class="w-full bg-primary text-white">
-              <a href="#" class="flex items-center gap-2">
+              <a href="https://app.berkompeten.id/login" class="flex items-center gap-2">
                 <span>Coba Sekarang</span>
               </a>
             </Button>
@@ -105,11 +167,9 @@ import { ref } from "vue";
 
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
@@ -127,18 +187,6 @@ import { Menu } from "lucide-vue-next";
 
 // Import logo
 import logoSvg from "@/assets/logo.svg";
-
-interface RouteProps {
-  href: string;
-  label: string;
-}
-
-const routeList: RouteProps[] = [
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#team", label: "Team" },
-  { href: "#contact", label: "Contact" },
-  { href: "#faq", label: "FAQ" },
-];
 
 const isOpen = ref(false);
 </script>
