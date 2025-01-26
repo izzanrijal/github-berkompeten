@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import Separator from "./ui/separator/Separator.vue";
-
-// Import the new logo
 import logoSvg from "@/assets/logo.svg";
 </script>
 
@@ -74,10 +72,10 @@ import logoSvg from "@/assets/logo.svg";
           <h3 class="font-bold text-lg mb-2">Legal</h3>
           <ul class="space-y-2">
             <li>
-              <a href="#privacy" class="text-sm opacity-70 hover:text-primary">Privacy Policy</a>
+              <router-link to="/privacy" class="text-sm opacity-70 hover:text-primary">Privacy Policy</router-link>
             </li>
             <li>
-              <a href="#terms" class="text-sm opacity-70 hover:text-primary">Terms of Service</a>
+              <router-link to="/terms" class="text-sm opacity-70 hover:text-primary">Terms of Service</router-link>
             </li>
           </ul>
         </div>
@@ -105,7 +103,7 @@ import logoSvg from "@/assets/logo.svg";
 
 <style scoped>
 img {
-  max-height: 2.5rem; /* Logo height consistency */
+  max-height: 2.5rem;
 }
 
 a {
