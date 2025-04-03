@@ -163,7 +163,7 @@ const formatPrice = (price: number | string) => {
             :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'"
             class="w-full"
           >
-            <a href="https://app.berkompeten.com/login" class="w-full">
+            <a href="https://app.berkompeten.id/login" class="w-full">
               {{ buttonText }}
             </a>
           </Button>

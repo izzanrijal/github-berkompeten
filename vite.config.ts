@@ -9,12 +9,12 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [tailwind(), autoprefixer()],
-    },
-  },
+      preview: {\n    allowedHosts: [" berkompeten.id\, \www.berkompeten.id\]\n },\n},
+    preview: {\n    allowedHosts: [" berkompeten.id\, \www.berkompeten.id\]\n },\n},
   plugins: [vue()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-    },
-  },
+      preview: {\n    allowedHosts: [" berkompeten.id\, \www.berkompeten.id\]\n },\n},
+    preview: {\n    allowedHosts: [" berkompeten.id\, \www.berkompeten.id\]\n },\n},
 });

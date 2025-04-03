@@ -60,7 +60,7 @@
 
     <!-- Call-to-Action Button -->
     <Button class="hidden lg:block bg-primary text-white hover:bg-primary/90">
-      <a href="https://app.berkompeten.com/login" class="flex items-center gap-2">
+      <a href="https://app.berkompeten.id/login" class="flex items-center gap-2">
         <span>Coba Sekarang</span>
       </a>
     </Button>
@@ -151,7 +151,7 @@
           <SheetFooter class="flex-col sm:flex-col justify-start items-start">
             <Separator class="mb-2" />
             <Button class="w-full bg-primary text-white">
-              <a href="https://app.berkompeten.com/login" class="flex items-center gap-2">
+              <a href="https://app.berkompeten.id/login" class="flex items-center gap-2">
                 <span>Coba Sekarang</span>
               </a>
             </Button>
