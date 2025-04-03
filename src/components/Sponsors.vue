@@ -9,15 +9,15 @@ interface Sponsor {
 
 const sponsors: Sponsor[] = [
   {
-    logo: "/public/unhas.png", // Logo Universitas Hasanuddin
+    logo: "/unhas.png", // Logo Universitas Hasanuddin
     name: "Universitas Hasanuddin",
   },
   {
-    logo: "/public/umi.png", // Logo Universitas Muslim Indonesia
+    logo: "/umi.png", // Logo Universitas Muslim Indonesia
     name: "Universitas Muslim Indonesia",
   },
   {
-    logo: "/public/unismuh.png", // Logo Universitas Muhammadiyah Makassar
+    logo: "/unismuh.png", // Logo Universitas Muhammadiyah Makassar
     name: "Universitas Muhammadiyah Makassar",
   },
 ];
