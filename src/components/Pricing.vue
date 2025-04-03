@@ -130,10 +130,10 @@ const formatPrice = (price: number | string) => {
             <div class="flex items-center gap-2">
               <span class="text-3xl font-bold">{{ formatPrice(discountedPrice) }}</span>
               <span
-                v-if="typeof originalPrice === 'number'"
+                v-if="typeof originalPrice === 'number' && typeof discountedPrice === 'number'"
                 class="text-sm text-primary font-semibold"
               >
-                {{ ((1 - discountedPrice / originalPrice) * 100).toFixed(0) }}% OFF
+                {{ (((originalPrice - discountedPrice) / originalPrice) * 100).toFixed(0) }}% OFF
               </span>
             </div>
             <span

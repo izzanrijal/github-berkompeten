@@ -8,8 +8,6 @@ import {
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
-
-import DiscordIcon from "@/icons/DiscordIcon.vue";
 </script>
 
 <template>

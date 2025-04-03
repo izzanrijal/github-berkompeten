@@ -4,7 +4,6 @@ const mode = useColorMode();
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-vue-next";
 </script>
 
 <template>

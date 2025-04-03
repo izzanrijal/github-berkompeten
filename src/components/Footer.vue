@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Separator from "./ui/separator/Separator.vue";
-import logoSvg from "@/assets/logo.svg";
 </script>
 
 <template>

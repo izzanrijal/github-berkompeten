@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { onMounted, ref } from 'vue';
+import type { EmblaCarouselType } from 'embla-carousel';
 
 import {
   Card,
@@ -55,7 +56,7 @@ const reviewList: ReviewProps[] = [
   },
 ];
 
-const api = ref(null);
+const api = ref<EmblaCarouselType | null>(null);
 
 onMounted(() => {
   const autoPlayInterval = setInterval(() => {

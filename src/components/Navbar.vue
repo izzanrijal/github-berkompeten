@@ -185,9 +185,6 @@ import { Separator } from "@/components/ui/separator";
 
 import { Menu } from "lucide-vue-next";
 
-// Import logo
-import logoSvg from "@/assets/logo.svg";
-
 const isOpen = ref(false);
 </script>
 
