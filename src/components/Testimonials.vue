@@ -31,7 +31,7 @@ interface ReviewProps {
 
 const reviewList: ReviewProps[] = [
   {
-    image: "/melia.png",
+    image: "/melia.webp",
     name: "dr. Melia Budi",
     userName: "FK Universitas Hasanuddin",
     comment:
@@ -39,7 +39,7 @@ const reviewList: ReviewProps[] = [
     rating: 5.0,
   },
   {
-    image: "/rais.png",
+    image: "/rais.webp",
     name: "dr. Rais Dahyar",
     userName: "FK Universitas Hasanuddin",
     comment:
@@ -47,7 +47,7 @@ const reviewList: ReviewProps[] = [
     rating: 4.8,
   },
   {
-    image: "/dewi.png",
+    image: "/dewi.webp",
     name: "dr. Dewi Damayanti",
     userName: "FK Universitas Muslim Indonesia",
     comment:
@@ -57,15 +57,23 @@ const reviewList: ReviewProps[] = [
 ];
 
 const api = ref<EmblaCarouselType | null>(null);
+const autoPlayInterval = ref<number | null>(null);
 
 onMounted(() => {
-  const autoPlayInterval = setInterval(() => {
-    if (api.value) {
-      api.value.scrollNext();
-    }
-  }, 3000);
+  // Defer carousel initialization to reduce initial load impact
+  setTimeout(() => {
+    autoPlayInterval.value = window.setInterval(() => {
+      if (api.value) {
+        api.value.scrollNext();
+      }
+    }, 3000);
+  }, 1000);
 
-  return () => clearInterval(autoPlayInterval);
+  return () => {
+    if (autoPlayInterval.value) {
+      clearInterval(autoPlayInterval.value);
+    }
+  };
 });
 </script>
 
@@ -117,6 +125,9 @@ onMounted(() => {
                   <AvatarImage
                     :src="review.image"
                     :alt="review.name"
+                    width="40"
+                    height="40"
+                    loading="lazy"
                   />
                   <AvatarFallback>{{ review.name.charAt(0) }}</AvatarFallback>
                 </Avatar>
